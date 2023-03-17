@@ -1,0 +1,36 @@
+# This is an automatically generated file, please do not edit!
+# If you want to make any changes see: https://github.com/moonpay/ghsec
+
+name: CodeQL
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - test/**
+      - tests/**
+      - '**/*.test.ts'
+      - '**/*.md'
+      - '**/*.txt'
+  pull_request:
+    branches:
+      - main
+    paths-ignore:
+      - test/**
+      - tests/**
+      - '**/*.test.ts'
+      - '**/*.md'
+      - '**/*.txt'
+  schedule:
+    - cron: 45 2 * * 3
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  analyze:
+    if: ${{ github.actor != 'renovate[bot]' }}
+    uses: moonpay/ghsec/.github/workflows/codeql-analysis-shared.yml@v1.0.0
+    secrets: inherit
