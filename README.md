@@ -1,5 +1,8 @@
 # Getting start with the MoonPay Login demo
 
+## Getting Started guide
+[MoonPay Wallets SDK Step-by-Step Guide](https://docs.moonpay.com/login-sdk/jxM5rh5T22VMnnSFRdS7/wallets-sdk/wallets-sdk-step-by-step-guide)
+
 ## Introduction
 
 ```bash
